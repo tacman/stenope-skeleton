@@ -35,11 +35,13 @@
         {% endblock %}
 
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+{#            {{ encore_entry_link_tags('app') }}#}
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {{ importmap() }}
+{#            {{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body
@@ -64,7 +66,7 @@
             </main>
 
             {% block footer %}
-                {% include 'layout/footer.html.twig' %}
+                {{ include('layout/footer.html.twig') }}
             {% endblock %}
         </div>
     </body>

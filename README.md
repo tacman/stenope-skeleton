@@ -6,9 +6,7 @@ with [Stenope](https://stenopephp.github.io/Stenope/).
 It contains [a few features](https://stenopephp.github.io/skeleton/articles/guide#what-s-inside) to get you started 
 if you plan to create a content website from scratch along with the following stack:
 
-- Symfony 6.1
-- Webpack Encore
-- Sass
+- Symfony 6.3
 - Lint / CS (php-cs-fixer, phpstan, eslint, …)
 - Glide integration for images resizing
 - and more…
@@ -18,25 +16,24 @@ if you plan to create a content website from scratch along with the following st
 Start a new app from scratch using this skeleton with:
 
 ```shell
-composer create-project stenope/skeleton -s dev
+composer create-project tacman/stenope-skeleton -s dev
 ```
 
 ## Prerequisites
 
 Either:
 
-- Node 16+,
 - PHP 8.1+
 - [Symfony CLI](https://symfony.com/download)
 - Composer
-- Make
+- Castor (for task management)
 
 ## Setup
 
 Install the dependencies using
 
 ```shell
-make install
+composer install
 ```
 
 ## Dev
@@ -44,7 +41,7 @@ make install
 Start a server using
 
 ```shell
-make serve
+symfony server:start -d
 ```
 
 The Symfony CLI exposes you the URL at which the site is available.
